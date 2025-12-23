@@ -1,0 +1,99 @@
+.knn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* centre horizontalement tout le contenu */
+    justify-content: center;
+    min-height: 60vh;      /* hauteur relative pour centrer verticalement */
+    text-align: center;
+}
+
+.knn-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* centre labels et boutons */
+    gap: 15px;
+}
+
+.knn-form input, .knn-form select {
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.knn-form button.btn-primary {
+    padding: 12px 28px;
+    font-size: 18px;
+    border-radius: 8px;
+    background-color: #0d3b66;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.knn-form button.btn-primary:hover {
+    background-color: #1e6091;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+.knn-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* centre tous les éléments horizontalement */
+    gap: 15px;            /* espace entre les champs et le bouton */
+}
+
+.knn-form button {
+    display: block;       /* rend le bouton un bloc pour pouvoir centrer avec margin */
+    margin: 0 auto;       /* centre le bouton */
+    padding: 12px 28px;
+    font-size: 18px;
+    border-radius: 8px;
+    background-color: #0d3b66;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.knn-form button:hover {
+    background-color: #1e6091;
+    transform: scale(1.05);
+}
+/* Formulaire KNN */
+.knn-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+}
+
+/* Chaque champ */
+.form-field {
+    display: flex;
+    flex-direction: column; /* label au-dessus de l'input */
+    align-items: center;
+    gap: 5px;
+}
+
+/* Inputs */
+.form-field input {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 250px;
+    text-align: center;
+}
+
+/* Labels */
+.form-field label {
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+

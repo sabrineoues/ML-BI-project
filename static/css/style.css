@@ -1,0 +1,194 @@
+/* ----------------- Global ----------------- */
+body {
+    font-family: "Times New Roman", Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f8; /* gris très clair */
+    color: #0d3b66;
+}
+
+/* ----------------- Header ----------------- */
+header {
+    background-color: #1e6091; /* bleu moyen */
+    color: #ffffff;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* ----------------- Navigation ----------------- */
+nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+nav a {
+    color: #cce0ff; /* bleu clair */
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #0d3b66; /* bleu foncé */
+    color: #ffffff;
+}
+
+nav a.active {
+    background-color: #084c61; /* bleu très foncé */
+    color: #ffffff;
+}
+
+/* ----------------- Main Content ----------------- */
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* ----------------- Titles & Texts ----------------- */
+h2 {
+    text-align: center;
+    color: #0d3b66;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: center;
+    color: #1e6091;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* ----------------- Buttons ----------------- */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #0d3b66;
+    color: #ffffff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #1e6091;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* ----------------- Dashboard Container ----------------- */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* centre verticalement */
+    align-items: center;      /* centre horizontalement */
+    height: 70vh;             /* hauteur relative pour centrer verticalement */
+    text-align: center;
+}
+
+.dashboard-container .btn-primary {
+    font-size: 20px;
+    padding: 20px 40px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.dashboard-container .btn-primary:hover {
+    background-color: #1e6091; /* bleu plus clair au hover */
+    transform: scale(1.05);
+}
+/* Page KNN */
+.knn-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;        /* centre horizontalement */
+    justify-content: center;    /* centre verticalement */
+    min-height: 80vh;           /* hauteur relative pour centrer verticalement */
+    text-align: center;
+    gap: 25px;
+}
+
+/* Formulaire */
+.knn-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+}
+
+/* Labels et champs du formulaire */
+.knn-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.knn-form input {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 250px;
+    text-align: center;
+}
+
+/* Bouton */
+.knn-form button {
+    padding: 12px 28px;
+    font-size: 18px;
+    border-radius: 10px;
+    background-color: #0d3b66;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.knn-form button:hover {
+    background-color: #1e6091;
+    transform: scale(1.05);
+}
+
+/* Résultats */
+.result-label {
+    font-size: 22px;
+    color: #0d3b66;
+}
+
+.result-confidence {
+    font-size: 18px;
+    color: #1e6091;
+}
+
+/* Message d’erreur */
+.error-msg {
+    color: red;
+    font-weight: bold;
+}

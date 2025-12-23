@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>ML & BI Platform</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>ML & BI Platform</h1>
+        <nav>
+            <a href="/dashboard/" class="{% if request.path == '/dashboard/' %}active{% endif %}">📊 Dashboard BI</a>
+            <a href="/knn/" class="{% if request.path == '/knn/' %}active{% endif %}">KNN</a>
+            <a href="/xgboost/" class="{% if request.path == '/xgboost/' %}active{% endif %}">XGBoost</a>
+            <a href="/regression/" class="{% if request.path == '/regression/' %}active{% endif %}">Regression</a>
+            <a href="/kmeans/" class="{% if request.path == '/kmeans/' %}active{% endif %}">KMeans</a>
+        </nav>
+    </header>
+
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
