@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="knn-page">
+    <h1>XGBoost Insurance Prediction</h1>
+
+    <p>Fill in your details below to discover if your future job comes with insurance protection!</p>
+
+    <form method="post" class="knn-form">
+        {% csrf_token %}
+        {% for field in form %}
+            <div class="form-field">
+                {{ field.label_tag }}
+                {{ field }}
+                {% if field.errors %}
+                    <p class="error-msg">{{ field.errors }}</p>
+                {% endif %}
+            </div>
+        {% endfor %}
+        <button type="submit" class="btn btn-primary">Predict</button>
+    </form>
+
+    {% if label %}
+        <h2 class="result-label">Prediction: {{ label }}</h2>
+        {% if confidence %}
+            <p class="result-confidence">Confidence: {{ confidence }}%</p>
+        {% endif %}
+    {% endif %}
+
+    {% if model_missing %}
+        <p class="error-msg">⚠️ Model file missing. Please check xgb_model.pkl!</p>
+    {% endif %}
+</div>
+{% endblock %}

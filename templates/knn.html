@@ -4,7 +4,7 @@
 {% block content %}
 <div class="knn-page">
     <h1>KNN JobLevel Prediction</h1>
-
+     <p>Discover the level of your upcoming job—just provide a few details!</p>
     <form method="post" class="knn-form">
         {% csrf_token %}
         {% for field in form %}
@@ -26,8 +26,6 @@
         {% endif %}
     {% endif %}
 
-    {% if model_missing %}
-        <p class="error-msg">⚠️ Model file missing. Please check knn_pipeline.pkl!</p>
-    {% endif %}
+    
 </div>
 {% endblock %}

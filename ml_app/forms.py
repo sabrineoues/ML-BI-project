@@ -2,14 +2,22 @@ from django import forms
 
 
 class KNNSampleForm(forms.Form):
-    salary = forms.FloatField(label='Salary')
-    company_name_freq = forms.FloatField(label='Company Name')
-    Location_freq = forms.CharField(label='Location')
+    company_name = forms.CharField(label="Company Name")
+    location = forms.CharField(label="Location")
+    salary = forms.FloatField(label="Salary")
+
+
+
 
 
 class XGBForm(forms.Form):
-    feature1 = forms.FloatField()
-    feature2 = forms.FloatField()
+    location = forms.CharField(label="Location")
+    skill = forms.CharField(label="Skill")
+    company_name = forms.CharField(label="Company Name")
+    platform_name = forms.CharField(label="Platform Name")
+    degree = forms.CharField(label="Degree")
+    salary = forms.FloatField(label="Salary")  # si tu veux garder le salaire
+
 
 
 class RegressionForm(forms.Form):

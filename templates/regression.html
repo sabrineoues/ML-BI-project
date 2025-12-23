@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="knn-page">
+    <h1>KNN JobLevel Prediction</h1>
+     <p>Discover the level of your upcoming job—just provide a few details!</p>
+    <form method="post" class="knn-form">
+        {% csrf_token %}
+        {% for field in form %}
+            <div class="form-field">
+                {{ field.label_tag }}   <!-- label au-dessus -->
+                {{ field }}             <!-- input -->
+                {% if field.errors %}
+                    <p class="error-msg">{{ field.errors }}</p>
+                {% endif %}
+            </div>
+        {% endfor %}
+        <button type="submit" class="btn btn-primary">Predict</button>
+    </form>
+
+    {% if label %}
+        <h2 class="result-label">Predicted JobLevel: {{ label }}</h2>
+        {% if confidence %}
+            <p class="result-confidence">Confidence: {{ confidence }}%</p>
+        {% endif %}
+    {% endif %}
+
+    
+</div>
+{% endblock %}
