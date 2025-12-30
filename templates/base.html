@@ -1,29 +1,55 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ML & BI Platform</title>
+    <title>MetricCareer - ML & BI Platform</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
     <header>
         <div class="header-content">
-            <h1>ML & BI Platform</h1>
+            <div class="logo-container">
+                <img src="{% static 'images/logo1.png' %}" alt="MetricCareer Logo" class="logo">
+                <h2>MetricCareer</h2>
+            </div>
             <nav class="primary-nav">
                 <a href="/" class="{% if request.path == '/' %}active{% endif %}">Home</a>
                 <a href="/knn/" class="{% if request.path == '/knn/' %}active{% endif %}">Job Level Prediction</a>
                 <a href="/xgboost/" class="{% if request.path == '/xgboost/' %}active{% endif %}">Insurance Prediction</a>
                 <a href="/regression/" class="{% if request.path == '/regression/' %}active{% endif %}">Salary Prediction</a>
-               <!-- <a href="/kmeans/" class="{% if request.path == '/kmeans/' %}active{% endif %}">KMeans</a>-->
             </nav>
-            <a href="https://app.powerbi.com/links/KXN1LK44bV?ctid=604f1a96-cbe8-43f8-abbf-f8eaf5d85730&pbi_source=linkShare" target="_blank" rel="noopener noreferrer" class="dashboard-btn">📊 Dashboard BI</a>
+            <a href="https://app.powerbi.com/links/KXN1LK44bV?ctid=604f1a96-cbe8-43f8-abbf-f8eaf5d85730&pbi_source=linkShare" target="_blank" rel="noopener noreferrer" class="dashboard-btn">📊 BI Dashboard</a>
         </div>
     </header>
-
 
     <main>
         {% block content %}{% endblock %}
     </main>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>MetricCareer</h3>
+                <p>ML Predictions to boost your career with 95% accuracy</p>
+                <p>Instant • Accurate • Free</p>
+            </div>
+            <div class="footer-section">
+                <h4>Products</h4>
+                <a href="/knn/">→ Job Level Prediction</a>
+                <a href="/xgboost/">→ Insurance Prediction</a>
+                <a href="/regression/">→ Salary Prediction</a>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>📧 contact@mlbiplatform.com</p>
+                <p>📞 +216 23 45 67 89</p>
+                <p>📍 Tunis, Tunisia</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 MetricCareer. All rights reserved. </p>
+        </div>
+    </footer>
 </body>
 </html>
